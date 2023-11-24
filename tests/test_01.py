@@ -1,5 +1,5 @@
-from aoc import day_01
-from aoc.load_data import get_test_data
+from aoc_23 import day_01
+from aoc_23.load_data import get_test_data
 
 
 test_data = get_test_data(1)

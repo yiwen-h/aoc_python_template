@@ -14,7 +14,7 @@ def get_data(day):
         with open(f'real_data/{day}.txt') as f:
             raw_data = f.read()
     else: 
-        response = requests.get(f'https://adventofcode.com/2021/day/{day}/input',
+        response = requests.get(f'https://adventofcode.com/2023/day/{day}/input',
                             cookies={'session': COOKIE})
         raw_data = response.content.decode('UTF-8')
         with open(f'real_data/{day}.txt', 'w') as f:
