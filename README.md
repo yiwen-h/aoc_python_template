@@ -22,7 +22,7 @@
 8. Put your answer into the AOC website - hopefully you've got your star! ⭐
 
 
-## Fancy API way of getting the real data
+## (optional) Fancy API way of getting the real data 
 
 1. Get your Session cookie from the advent of code website! [instructions here](https://mmhaskell.com/blog/2023/1/30/advent-of-code-fetching-puzzle-input-using-the-api)
 2. Rename the .envEXAMPLE file to .env
