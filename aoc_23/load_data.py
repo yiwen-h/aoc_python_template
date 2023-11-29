@@ -6,14 +6,16 @@ load_dotenv()
 COOKIE = os.environ.get("SESSION")
 
 def check_file_exists(day):
-    filepath = os.path.join('real_data', '{day}.txt')
+    filepath = os.path.join('real_data', f'{day}.txt')
     return os.path.isfile(filepath)
 
 def get_data(day):
     if check_file_exists(day):
+        print('loading existing file')
         with open(f'real_data/{day}.txt') as f:
             raw_data = f.read()
     else: 
+        print('getting file')
         response = requests.get(f'https://adventofcode.com/2023/day/{day}/input',
                             cookies={'session': COOKIE})
         raw_data = response.content.decode('UTF-8')

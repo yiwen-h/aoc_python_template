@@ -3,7 +3,7 @@ from aoc_23.load_data import get_test_data
 
 
 test_data = get_test_data(1)
-expected_result_part_1 = 7
+expected_result_part_1 = None
 
 
 def test_day_1_a():
