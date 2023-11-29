@@ -2,8 +2,9 @@ import requests
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-COOKIE = os.environ.get("SESSION")
+if os.path.isfile('.env'):
+    load_dotenv()
+    COOKIE = os.environ.get("SESSION")
 
 def check_file_exists(day):
     filepath = os.path.join('real_data', f'{day}.txt')
@@ -15,12 +16,15 @@ def get_data(day):
         with open(f'real_data/{day}.txt') as f:
             raw_data = f.read()
     else: 
-        print('getting file')
-        response = requests.get(f'https://adventofcode.com/2023/day/{day}/input',
-                            cookies={'session': COOKIE})
-        raw_data = response.content.decode('UTF-8')
-        with open(f'real_data/{day}.txt', 'w') as f:
-            f.write(raw_data)
+        if os.path.isfile('.env'):
+            print('getting file')
+            response = requests.get(f'https://adventofcode.com/2023/day/{day}/input',
+                                cookies={'session': COOKIE})
+            raw_data = response.content.decode('UTF-8')
+            with open(f'real_data/{day}.txt', 'w') as f:
+                f.write(raw_data)
+        else:
+            print('data file not found')
     return raw_data
 
 def get_test_data(day):

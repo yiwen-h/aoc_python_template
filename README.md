@@ -20,3 +20,11 @@
 6. Once it passes the test, create your real data file in the `real_data` folder. Copy and paste your data from the aoc website.
 7. Run your function with the full data by uncommenting the lines.
 8. Put your answer into the AOC website - hopefully you've got your star! ⭐
+
+
+## Fancy API way of getting the real data
+
+1. Get your Session cookie from the advent of code website! [instructions here](https://mmhaskell.com/blog/2023/1/30/advent-of-code-fetching-puzzle-input-using-the-api)
+2. Rename the .envEXAMPLE file to .env
+3. Replace the `cookiegoeshere` text from the .env file with your Session cookie! 
+4. Now, you should be able to pull the input data file directly from the AOC website without needing to copy and paste it into a .txt file.
