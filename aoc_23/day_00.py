@@ -2,6 +2,9 @@ from load_data import get_data
 from itertools import combinations
 day = 00
 
+## Using 2020 Day 1 as an example
+## https://adventofcode.com/2020/day/1
+
 def part_1(data):
     # split data into vector/list of numbers
     numbers = data.split('\n')
