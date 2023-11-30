@@ -1,5 +1,7 @@
 # Advent of code Python template
 
+Python package template demonstrating TDD in Python package format for Advent of Code
+
 ## Getting set up
 
 1. Please clone this repo or fork it to your own github account.
@@ -28,3 +30,7 @@
 2. Rename the .envEXAMPLE file to .env
 3. Replace the `cookiegoeshere` text from the .env file with your Session cookie! 
 4. Now, you should be able to pull the input data file directly from the AOC website without needing to copy and paste it into a .txt file.
+
+## Other optional stretch goals
+
+Implement Continuous Integration using github actions so that your tests automatically run when you push to main!
